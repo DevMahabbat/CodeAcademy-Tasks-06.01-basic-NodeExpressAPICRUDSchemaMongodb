@@ -83,7 +83,7 @@ app.put("/api/posts/:id", async (req, res) => {
 //     newpost["title"] = title;
 //   }
 //   console.log(newpost);
-  await Post.findByIdAndUpdate(id, { "title": title, "likeCount": likeCount })
+  await Post.findByIdAndUpdate(id, { "title": title, "likeCount": likeCount, "body": body})
    Post.findById(id)
   .then((data) => { res.status(200).json(data);});
  
